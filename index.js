@@ -20,11 +20,11 @@ function play(question, answer){
 var highScore = [
   {
     name: "Pratik",
-    score: 3
+    score: 5
   },
   {
     name: "Ayush",
-    score: 2
+    score: 4
   }
 
 ]
@@ -53,6 +53,22 @@ var allQuestions = [
     c: Filch's office
     `,
     answer: "c"
+  },
+  {
+    question: `Which house did sorting hat recommended first to Harry Potter?
+    a: Gryffindor
+    b: Slytherin
+    c: Ravenclaw
+    `,
+    answer: "b"
+  },
+  {
+    question: `Total how many Horcruxes did Voldemort created?
+    a: 5
+    b: 7
+    c: 9
+    `,
+    answer: "b"
   }
 ]
 
