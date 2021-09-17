@@ -1,20 +1,21 @@
 var readlineSync = require('readline-sync');
+const chalk = require('chalk');
 
-var welcomeUser = readlineSync.question("What is your Name ");
-console.log("Welcome " + welcomeUser + " to Harry Potter Quiz");
+var welcomeUser = readlineSync.question("What is your Name: ");
+console.log("Welcome " + chalk.green(welcomeUser) + " to Harry Potter Quiz!");
 var score = 0;
 function play(question, answer){
   var userIp = readlineSync.question(question);
 
   if(userIp.toUpperCase() === answer.toUpperCase()){
     score++;
-    console.log("You are right!");
+    console.log(chalk.green("You are right!"));
   } else {
-    console.log("You are wrong!");
+    console.log(chalk.red("You are wrong!"));
   }
 
   console.log("Current Score: "+ score);
-    console.log("--------------------");
+    console.log(chalk.bgMagenta("--------------------"));
 }
 
 var highScore = [
@@ -75,7 +76,7 @@ var allQuestions = [
 for(var i=0; i<allQuestions.length; i++){
   play(allQuestions[i].question, allQuestions[i].answer);
 }
-console.log("==========HIGH SCORES===========");
+console.log(chalk.bgGreen.black("==========HIGH SCORES==========="));
 for(var i=0; i<highScore.length; i++){
   console.log(highScore[i].name +" : "+highScore[i].score);
 }
